@@ -2,7 +2,7 @@
 class castle {
     constructor() {
         this.scale = 0.5
-        this.image = castle
+        this.image = castleImg
         this.width = this.image.width * this.scale
         this.height = this.image.height * this.scale
         this.position = {

@@ -12,7 +12,7 @@ var mouse = { x: c.width / 2, y: c.height / 2 }
 const playerRight = document.getElementById('AmeRight')
 const playerLeft = document.getElementById('AmeLeft')
 
-const castle = document.getElementById('castle')
+const castleImg = document.getElementById('castle')
 
 const summonGura = document.getElementById('SummonGura')
 const summonIna = document.getElementById('SummonIna')
