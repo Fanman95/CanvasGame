@@ -443,6 +443,8 @@ gameStartBtn.addEventListener('click', () => {
     }, 1000)
 
     animate()
+    //Testing
+    console.log(castleImg.width, castleImg.height)
 
 })
 
