@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="preloader.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Preloader-->
+    <div class="Preloader">
+        <div class="spinner-border text-light" role="status">
+        </div>
+        <p class="preloaderText">Loading...</p>
+        <p class="preloaderText">Enjoy this game</p>
+    </div>
+
+    <!--Message Before Game-->
+    <div class="MessageBoxWrap">
+        <div class="MessageBox">
+            <p>Game Designer: Tom Fan</p>
+            <br />
+            <p>Image Source: Walfie</p>
+            <p>Walfie's Website: <a href="https://walfiegif.wordpress.com/">https://walfiegif.wordpress.com/</a></p>
+            <br />
+            <p>Target Device: PC</p>
+            <br />
+            <p>Welcome to my GitHub & Edit the game with your idea</p>
+            <p>Game Language: JavaScript</p>
+            <p>***This game is not for Commercial***</p>
+            <br />
+            <p>Game:</p>
+            <p>1. Press "P" to pause the game</p>
+            <p>2. Press other key to continue</p>
+            <p>3. Get the highest point as you can</p>
+            <p>4. You can get skill point per 5000 score, max. 50 points</p>
+            <p>5. Press "Q" "W" "E" "R" to release skills</p>
+            <p>6.<br />
+                "Q": 30s CD<br />
+                "W": 60s CD<br />
+                "E": 30s CD<br />
+                "R": 120s CD</p>
+            <p>7. Press F11 to play this game with fullscreen</p>
+            <br />
+            <p>Other cedit:</p>
+            <p>https://www.pexels.com/photo/pencil-on-spiral-drawing-notebook-163031/</p>
+            <p>https://www.pngall.com/portal-png</p>
+        </div>
+        <button class="MessageBoxWrapBtn">
+        </button>
+
+    </div>
+
+    <!--Content-->
+    <div class="Bg"></div>
+    <button class="gameStartBtn">
+        <p>New Game</p>
+    </button>
+    <!--Canvas-->
+    <h1 class="Score">0</h1>
+    <canvas id="canvas"></canvas>
+
+    <!--Pause-->
+    <div class="PausePage">
+        <h1>Pause</h1>
+    </div>
+
+    <!--Player Status-->
+    <div class="skillPointsBar">
+        <div class="skillPointsBarBox">
+            <h1 id="atkValue">ATK</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_0"></button>
+            <h1 id="speedValue">Speed</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_1"></button>
+            <h1 id="chargeValue">Charge</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_2"></button>
+            <h1 id="releaseValue">Release</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_3"></button>
+            <h1 id="skillPointsTotal">0/0</h1>
+        </div>
+
+        <div class="skillPointsBarBox">
+            <h1 id="lightningValue">Lightning</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_4"></button>
+            <h1 id="waterValue">Water</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_5"></button>
+            <h1 id="FireDanceValue">Fire Dance</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_6"></button>
+            <h1 id="CastleValue">Castle Hp</h1>
+            <button class="skillPointsBtn" id="skillPointsBtn_7"></button>
+        </div>
+
+
+    </div>
+
+    <div class="imageStorage">
+        <img src="./Img/AmeRight.png" id="AmeRight">
+        <img src="./Img/AmeLeft.png" id="AmeLeft">
+
+        <img src="./Img/AmeSwordRight.png" id="AmeSwordRight">
+        <img src="./Img/AmeSwordLeft.png" id="AmeSwordLeft">
+
+        <img src="./Img/AmeLeft.png" id="playerLeft">
+        <img src="./Img/AmeRight.png" id="playerRight">
+
+        <img src="./Img/GuraRight.png" id="GuraRight">
+        <img src="./Img/GuraLeft.png" id="GuraLeft">
+
+        <img src="./Img/InaRight.png" id="InaRight">
+        <img src="./Img/InaLeft.png" id="InaLeft">
+
+        <img src="./Img/MoriRight.png" id="MoriRight">
+        <img src="./Img/MoriLeft.png" id="MoriLeft">
+
+        <img src="./Img/KiaraRight.png" id="KiaraRight">
+        <img src="./Img/KiaraLeft.png" id="KiaraLeft">
+
+        <img src="./Img/HammerRight.png" id="HammerRight">
+        <img src="./Img/HammerLeft.png" id="HammerLeft">
+
+        <img src="./Img/wind.png" id="wind">
+
+        <img src="./Img/SelenBday.png" id="SelenBday">
+
+        <img src="./Img/Summon.png" id="SummonGura">
+        <img src="./Img/SummonIna.png" id="SummonIna">
+
+    </div>
+
+    <!--JavaScript-->
+    <script src="portal.js"></script>
+    <script src="castle.js"></script>
+    <script src="player.js"></script>
+    <script src="newObject.js"></script>
+    <script src="playerSkill.js"></script>
+    <script src="boxCollision.js"></script>
+    <script src="hitEffect.js"></script>
+    <script src="eliteEnemy.js"></script>
+    <script src="canvas.js"></script>
+
+    <!--Cedit: 
+        https://www.pexels.com/photo/pencil-on-spiral-drawing-notebook-163031/
+        https://www.pngall.com/portal-png
+    -->
+
+</body>
+
+</html>
