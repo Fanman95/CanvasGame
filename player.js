@@ -225,12 +225,12 @@ class player {
 }
 
 window.addEventListener("mousedown", function () {
-    if (!gameStartConfirm === true) return
+    if (gameStartConfirm !== true) return
     Player.skill.Ame = true
 });
 
 window.addEventListener("mouseup", function () {
-    if (!gameStartConfirm === true) return
+    if (gameStartConfirm !== true) return
     Player.skill.Ame = false
 });
 
