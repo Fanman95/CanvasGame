@@ -1,29 +1,25 @@
 //Tom Fan
 class castle {
     constructor() {
-        const castle = new Image()
-        castle.src = './Img/castle.png'
-
-        castle.onload = () => {
-            this.scale = 0.5
-            this.image = castle
-            this.width = this.image.width * this.scale
-            this.height = this.image.height * this.scale
-            this.position = {
-                x: c.width / 2 - this.width / 2,
-                y: c.height / 2 - this.height / 2
-            }
-
-            this.center = {
-                x: c.width / 2,
-                y: c.height / 2
-            }
-
-            this.hp = 50000
-            this.maxHP = 50000
-            this.hpBarLength = this.width
-            this.hpBarLengthPercent = 1
+        this.scale = 0.5
+        this.image = castle
+        this.width = this.image.width * this.scale
+        this.height = this.image.height * this.scale
+        this.position = {
+            x: c.width / 2 - this.width / 2,
+            y: c.height / 2 - this.height / 2
         }
+
+        this.center = {
+            x: c.width / 2,
+            y: c.height / 2
+        }
+
+        this.hp = 50000
+        this.maxHP = 50000
+        this.hpBarLength = this.width
+        this.hpBarLengthPercent = 1
+
 
     }
 
