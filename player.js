@@ -168,7 +168,7 @@ class player {
                     this.image = playerRight;
                     break;
                 case true:
-                    this.image = AmeRight;
+                    this.image = AmeSwordRight;
                     if (this.skillRemain.Ame > 0 && Slashs.length < this.releasePerTime.Ame) {
                         Slashs.push(new slash(mouse.x, mouse.y, this.skillArea.Ame))
                         this.skillRemain.Ame--
@@ -183,7 +183,7 @@ class player {
                     this.image = playerLeft;
                     break;
                 case true:
-                    this.image = AmeLeft;
+                    this.image = AmeSwordLeft;
                     if (this.skillRemain.Ame > 0 && Slashs.length < this.releasePerTime.Ame) {
                         Slashs.push(new slash(mouse.x, mouse.y, this.skillArea.Ame))
                         this.skillRemain.Ame--
