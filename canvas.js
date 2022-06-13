@@ -275,13 +275,11 @@ skillPointsBtn_7.addEventListener('click', () => {
     addSkillPoints()
 })
 //--------------------------------------------------
-const Player = new player();
-const Castle = new castle();
 let AllEnemy = [];
 let currentId = 0;
 const Slashs = [];
 let score = 0;
-const PlayerWind = new Wind();
+var Player, Castle, PlayerWind
 const Portals = [];
 const hitEffects = [];
 let Summons = [];
@@ -402,6 +400,7 @@ function animate() {
 
 var gameOver = false
 
+
 window.onload = () => {
     setTimeout(() => {
         document.querySelector('.Preloader').style.display = 'none'
@@ -415,7 +414,11 @@ gameStartBtn.addEventListener('click', () => {
     document.querySelector('.Score').style.display = 'block'
     skillPointsBar.style.pointerEvents = 'all'
     skillPointsBar.style.visibility = 'visible';
-
+    
+    Player = new player();
+    Castle = new castle();
+    PlayerWind = new Wind();
+    
     gameStartConfirm = true
 
     addPortal()
